@@ -1,0 +1,7 @@
+_pychache_/
+venv/
+env/
+*.venv/
+*.pyc
+*.pyo
+*.pyd
