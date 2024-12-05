@@ -3,8 +3,8 @@ import bcrypt
 def hashing_password(password_from_db):
     """
     Хэширование паролей
-    Получает на вход либо созданный сейчас пароль, либо пароль, вводимый при попытке входа
-    Возвращает их хэш для последующей проверки или внесения в БД
+    Получает на вход созданный при регистрации пароль
+    Возвращает его хэш
     """
     salt=bcrypt.gensalt()
     hashed_password=bcrypt.hashpw(password_from_db.encode('utf-8'),salt)

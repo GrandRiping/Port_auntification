@@ -19,7 +19,7 @@ def adding(log,psw):
 def checking_login(log):
     """
     Проверка наличия логина в БД
-    На вход получает логин log(str) из ввода
+    На вход получает логин из ввода
     Возвращает True/Fasle при проверках уникальности логина и при аунтефикации
     """
     with sqlite3.connect('Users.db') as db:
@@ -34,7 +34,7 @@ def checking_login(log):
 def hashed_password(log):
     """
     Получение хэша пароля из БД
-    На вход получает логин log(str) при авторизации
+    На вход получает логин при авторизации
     Возвращает хэш пароля для соответствующего логина
     """
     with sqlite3.connect('Users.db') as db:
